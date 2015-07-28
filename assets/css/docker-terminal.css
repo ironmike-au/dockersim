@@ -50,4 +50,8 @@
   box-shadow: 0 0 5px rgba(0,100,0,50);
 }
 
+.terminal {
+  overflow: auto;
+}
+
 

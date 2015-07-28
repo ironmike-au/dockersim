@@ -1,0 +1,79 @@
+body {
+    font-size: 16px;
+    line-height: 1.5em;
+    font-family: Arial;
+    width: 800px;
+    margin: 0 auto;
+}
+
+header {
+    height: 100px;
+    text-align: center;
+    background-color: #ededed;
+    padding: 1em 0;
+}
+
+header a {
+    text-decoration: none;
+    color: #414142;
+    position: relative;
+    vertical-align: middle;
+    font-size: 2em;
+    font-family: 'Bree Serif', serif;
+    margin-left: .2em;
+}
+
+main {
+    padding-top: 20px;
+}
+
+main h2 {
+    display: block;
+    font-size: 1.35em;
+}
+
+main h5 {
+    font-size: 1.15em;
+    font-weight: bold;
+}
+main p {
+    display: block;
+    font-size: 1.25em;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+.instruction {
+    font-size: 1.15em;
+    font-weight: bold;
+}
+
+pre {
+    font-size: 0.9em;
+    line-height: 1.4em;
+    font-family: "Courier 10 Pitch", Courier, monospace;
+    white-space: pre;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -o-pre-wrap;
+    width: auto;
+    display: block;
+    clear: both;
+    color: #555555;
+    padding: 1em 1em;
+
+    background: #faf8f0;
+    border: solid 1px #e1e1e1
+}
+code {
+    font-size: 0.9em;
+    line-height: 1.4em;
+    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+    display: inline;
+    color: #555555;
+    padding: 1em 1em;
+
+    background: #f4f4f4;
+}
