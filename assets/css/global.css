@@ -2,53 +2,78 @@ body {
     font-size: 16px;
     line-height: 1.5em;
     font-family: Arial;
+}
+
+header  {
+    height: 40px;
+    margin-top: 0px;
+    padding-top: 0px;
+    position: absolute;
+    width: 100%;
+    background: #efedee;
+
+}
+
+.active {
+    font-weight: bold;
+}
+
+header ol {
+    list-style: none;
+    display: inline;
+    float: right;
+    padding: 7px 0 0;
+    width: 90%;
+}
+
+header li {
+    display: list-item;
+    display: inline;
+    text-align: -webkit-match-parent;
+    position: relative;
+}
+
+.instruction-div {
+    padding-top: 60px;
     width: 800px;
     margin: 0 auto;
+    height: 55%;
 }
 
-header {
-    height: 100px;
-    text-align: center;
-    background-color: #ededed;
-    padding: 1em 0;
-}
-
-header a {
-    text-decoration: none;
-    color: #414142;
-    position: relative;
-    vertical-align: middle;
-    font-size: 2em;
-    font-family: 'Bree Serif', serif;
-    margin-left: .2em;
-}
-
-main {
-    padding-top: 20px;
-}
-
-main h2 {
-    display: block;
+.instruction-div h2 {
     font-size: 1.35em;
+    color: #000;
 }
 
-main h5 {
+.instruction-div h2 em {
+    color: #8D8D8D;
+    margin-right: 5px;
+    padding-right: 15px;
+    position: relative;
+}
+
+.instruction-div h5 {
     font-size: 1.15em;
     font-weight: bold;
 }
-main p {
-    display: block;
-    font-size: 1.25em;
-    -webkit-margin-before: 1em;
-    -webkit-margin-after: 1em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
+
+.instruction-div p {
+    color: #434343;
+    font-size: 1.1em;
+    line-height: 1.3em;
 }
 
-.instruction {
-    font-size: 1.15em;
-    font-weight: bold;
+
+.terminal-div {
+    background-color: #D2D2D2;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    height: 40%;
 }
+
+
+
+
 
 pre {
     font-size: 0.9em;

@@ -19,13 +19,18 @@ var responses = {install: "Reading package lists... Done \n" +
                             "d2a0ecffe6fa        2 weeks ago         /bin/sh -c #(nop) CMD [\"/bin/bash\"]             0 B \n" +
                             "29460ac93442        2 weeks ago         /bin/sh -c sed -i 's/^#\\s*\\(deb.*universe\\)$/   1.895 kB \n" +
                             "b670fb0c7ecd        2 weeks ago         /bin/sh -c echo '#!/bin/sh' > /usr/sbin/polic   194.5 kB \n" +
-                            "83e4dde6b9cf        2 weeks ago         /bin/sh -c #(nop) ADD file:c8f078961a543cdefa   188.2 MB"};
+                            "83e4dde6b9cf        2 weeks ago         /bin/sh -c #(nop) ADD file:c8f078961a543cdefa   188.2 MB",
+                dkr_run1: "oops",
+                psa: "CONTAINER ID    IMAGE         COMMAND     CREATED        STATUS                    PORTS    NAMES\n" +
+                     "ad9521dbc0e5    ubuntu:14.04  echo oops   3 seconds ago  Exited (0) 3 seconds ago           romantic_pike"};
 
-var commands = {install: "sudo apt-get install docker.io",
-                ps: "sudo docker ps",
-                dkr_run: "sudo docker run -d -v /mnt/hgfs/django-initial-development:/www -i -t -p 8000:8000 zem_one:0.0.2 /bin/bash",
-                dkr_pull: "sudo docker pull ubuntu:14.04",
-                dkr_history: "sudo docker history ubuntu:14.04"}
+var commands = {install: "apt-get install docker.io",
+                ps: "docker ps",
+                dkr_run: "docker run -d -v /mnt/hgfs/django-initial-development:/www -i -t -p 8000:8000 zem_one:0.0.2 /bin/bash",
+                dkr_pull: "docker pull ubuntu:14.04",
+                dkr_history: "docker history ubuntu:14.04",
+                dkr_run1: "docker run ubuntu:14.04 echo \"oops\"",
+                psa: "docker ps -a"}
 
 // -----------------------------------------------------------------------
 // :: Set up and respond to docker console commands using pre-defined responses
@@ -51,6 +56,16 @@ jQuery(function($, undefined) {
             $( "#l2-s1" ).hide();
             $( "#l2-s2" ).hide();
             $( "#l2-s3" ).show();
+        } else if (command == commands.dkr_run1) {
+            response = responses.dkr_run1;
+            $( "#l3-s1" ).hide();
+            $( "#l3-s2" ).show();
+            $( "#l3-s3" ).hide();
+        } else if (command == commands.psa) {
+            response = responses.psa;
+            $( "#l3-s1" ).hide();
+            $( "#l3-s2" ).hide();
+            $( "#l3-s3" ).show();
         } else if (command == '') {
             response = '';
         }

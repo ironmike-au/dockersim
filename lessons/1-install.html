@@ -7,28 +7,37 @@
 </head>
 <body>
   <header>
-    <a href="/">Docker Sim</a>
+      <ol><li>Lessons: </li>
+          <li><a class="active" href="/lessons/1-install.html">Install</a></li>
+          <li>></li>
+          <li><a href="/lessons/2-images.html">Images</a></li>
+          <li>></li>
+          <li><a href="/lessons/3-containres.html">Containers</a>
+      </ol>
   </header>
-  <main>
-    <h2>Let's Install Docker</h2>
-    <div id="term_demo" class="terminal" style="height: 400px;">
+
+    <div class="instruction-div">
+      <h2><em>1.1</em>Let's Install Docker</h2>
+      <div id="l1-s1">
+        <p>Before you can use docker, you need to install docker. No surpises here.</p>
+        <p>Docker runs on Linux, so you'll need a Linux server with root access. We use Ubuntu here, but most flavors will do just fine.</p>
+        <p>Don't have Linux handy? Fear not, my friend. There is a nifty tool called <i><a href="http://boot2docker.io/">boot2docker</a></i> that will install a tiny copy of Linux on a virtual machine on Windows or OS X, just for running Docker. It has everything you need.</p>
+        <p>But you can do all that stuff later. For now, let's get typing so you can see how to install Docker. </p>
+        <p class="instruction">Install docker on Ubuntu with the following. Go ahead and type it in and see for yourself. </p>
+        <pre><code>apt-get install docker.io</code></pre>
+      </div>
+      <div id="l1-s2" style="display: none">
+        <p>Woo! You did it. Docker is installed. But before we can use it, we need to download an image. </p>
+        <p>Docker images are pre-defined server environments complete with everything we might need. </p>
+        <p>You can build your own images too, but for now let's see how to get a ready-made one</p>
+        <a href="/lessons/2-images.html">Lesson 2 - Get Your Image</a>
+      </div>
     </div>
-    <div id="l1-s1">
-      <p>Before you can use docker, you need to install docker. No surpises here.</p>
-      <p>Docker runs on Linux, so you'll need a Linux server with root access. We use Ubuntu here, but most flavors will do just fine.</p>
-      <p>Don't have Linux handy? Fear not, my friend. There is a nifty tool called <i><a href="http://boot2docker.io/">boot2docker</a></i> that will install a tiny copy of Linux on a virtual machine on Windows or OS X, just for running Docker. It has everything you need.</p>
-      <p>But you can do all that stuff later. For now, let's get typing so you can see how to install Docker. </p>
-      <p class="instruction">Install docker on Ubuntu with the following. Go ahead and type it in and see for yourself. </p>
-      <pre><code>sudo apt-get install docker.io</code></pre>
-    </div>
-    <div id="l1-s2" style="display: none">
-      <p>Woo! You did it. Docker is installed. But before we can use it, we need to download an image. </p>
-      <p>Docker images are pre-defined server environments complete with everything we might need. </p>
-      <p>You can build your own images too, but for now let's see how to get a ready-made one</p>
-      <a href="/lessons/2-images.html">Lesson 2 - Get Your Image</a>
+    <div class="terminal-div">
+      <div id="term_demo" class="terminal">
+      </div>
     </div>
 
-  </main>
   <script src="/assets/js/jquery-1.7.1.min.js"></script>
   <script src="/assets/js/bootstrap.min.js"></script>
   <script src="/assets/js/jquery.terminal-0.8.8.js"></script>
