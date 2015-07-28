@@ -1,0 +1,10 @@
+{
+  "name": "vlrz-static-sandbox",
+  "version": "0.1.0",
+  "description": "Villariaz Static Refresh Sandbox",
+  "dependencies": {
+    "grunt": "~0.4.5",
+    "http-server": "^0.6.1"
+    }
+}
+
