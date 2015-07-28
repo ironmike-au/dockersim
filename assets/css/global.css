@@ -11,7 +11,7 @@ header  {
     position: absolute;
     width: 100%;
     background: #efedee;
-
+    z-index: 10;
 }
 
 .active {
@@ -33,11 +33,47 @@ header li {
     position: relative;
 }
 
+main {
+    overflow: auto;
+}
+
+.home-wrapper {
+    padding-top: 80px;
+    width: 800px;
+    margin: 0 auto;
+
+}
+
+.home-wrapper p {
+    color: #434343;
+    font-size: 1.1em;
+    line-height: 1.3em;
+}
+
+.next-lesson {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.home-wrapper h3 {
+    font-size: 1.15em;
+    font-weight: bold;
+    line-height: 1.5em;
+}
+
+.instruction-wrapper {
+    height: 55%;
+}
+
 .instruction-div {
     padding-top: 60px;
     width: 800px;
     margin: 0 auto;
-    height: 55%;
+    /*height: 55%;*/
+    padding-bottom: 40px;
+
+
 }
 
 .instruction-div h2 {
@@ -65,10 +101,18 @@ header li {
 
 
 .terminal-div {
-    background-color: #D2D2D2;
+    border-top-style: solid;
+    border-top-color: gray;
+    border-top-width: 1px;
+    background-color: #4183c4;
     padding-top: 40px;
     padding-bottom: 40px;
-    height: 40%;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 45%;
+    width: 100%;
 }
 
 

@@ -12,24 +12,26 @@
         <li>></li>
         <li><a href="/lessons/2-images.html">Images</a></li>
         <li>></li>
-        <li><a class="active" href="/lessons/3-containres.html">Containers</a>
+        <li><a class="active" href="/lessons/3-containers.html">Containers</a>
     </ol>
   </header>
   <div class="instruction-div">
-    <h2><em>2.1</em>Container yourself!</h2>
     <div id="l3-s1">
+      <h2><em>2.1</em>Container yourself!</h2>
       <p>Docker containers are instances of an image that you can manipulate. Generally speaking, containers should serve one purpose, like running a web server.</p>
       <p>Containers are not full-blown operating systems. They're little copies designed to do one thing well. When a container stops doing that thing it was designed to do, it dies and everyone feels sad for it.</p>
       <p>Let's take a look:</p>
       <pre><code>docker run ubuntu:14.04 echo "oops"</code></pre>
     </div>
     <div id="l3-s2" style="display: none">
+      <h2><em>2.2</em>It's dead, Jim.</h2>
       <p>R.I.P. Your container lived a short but meaningful life. Mostly.</p>
       <p>Seriously. After running <strong>echo "oops"</strong> your container was terminated and is gone forever.</p>
       <p>You can see a history of your containers using the docker ps -a command.</p>
       <pre><code>docker ps -a</code></pre>
     </div>
     <div id="l3-s3" style="display: none">
+      <h2><em>2.3</em>Interactive Containers</h2>
       <p>Docker does allow you to run containers interactively, by using the command /bin/bash and attaching a terminal, but this isn't advisable in most cases</p>
       <p>Why? Because docker is designed to run containers that live fast and die young. </p>
       <p>What's next then? <a href="/lessons/further-reading.html">click here</a> for our recommended reading on other cool and exciting Docker topics.</p>

@@ -1,23 +1,40 @@
 <html>
 <head>
-  <link rel="stylesheet" href="assets/css/bootstrap.css">
-  <link rel="stylesheet" href="assets/css/global.css">
-  <link rel="stylesheet" href="assets/css/jquery.terminal.css">
-  <link rel="stylesheet" href="assets/css/docker-terminal.css">
+  <link rel="stylesheet" href="/assets/css/bootstrap.css">
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/jquery.terminal.css">
+  <link rel="stylesheet" href="/assets/css/docker-terminal.css">
 </head>
 <body>
   <header>
-    Docker Sim
+    <ol><li><a href="/" style="padding-right: 30px">Dockersim.com</a></li>
+        <li>Lessons: </li>
+        <li><a href="/lessons/1-install.html">Install</a></li>
+        <li>></li>
+        <li><a href="/lessons/2-images.html">Images</a></li>
+        <li>></li>
+        <li><a href="/lessons/3-containers.html">Containers</a></li>
+    </ol>
   </header>
   <main>
-    <div id="term_demo" class="terminal" style="height: 400px;">
+    <div class="home-wrapper">
+      <p>This site will introduce you to Docker, how it works, and how to use it. </p>
+      <p>In a simulated terminal, we'll show you the commands you need to get your own containers up and running.</p>
+      <h3>So, what is Docker?</h5>
+      <p>With Docker, you can create pre-packaged operating systems for running your software. These pre-packaged environments are called <i>containers</i>, and containers are the same wherever they go. </p>
+      <p>This means that when moving your application from, say, staging to production, you can be confident that everything will work because the production and staging servers are literally the same.</p>
+      <h3>How to use Dockersim.com</h5>
+      <p>This site is designed to show you how to use Docker in a few simple steps, before you go diving into setting up your own Docker server.</p>
+      <p>It shouldn't take more than 15 minutes.</p>
+      <p class="next-lesson"><a href="/lessons/1-install.html">Ready? Lesson 1 - Install Docker</a></p>
     </div>
   </main>
-  <script src="assets/js/jquery-1.7.1.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/jquery.terminal-0.8.8.js"></script>
-  <script src="assets/js/dterm.js"></script>
-  <script src="assets/js/docker-terminal.js"></script>
+
+  <script src="/assets/js/jquery-1.7.1.min.js"></script>
+  <script src="/assets/js/bootstrap.min.js"></script>
+  <script src="/assets/js/jquery.terminal-0.8.8.js"></script>
+  <script src="/assets/js/dterm.js"></script>
+  <script src="/assets/js/docker-terminal.js"></script>
 </body>
 </html>
 

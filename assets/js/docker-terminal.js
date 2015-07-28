@@ -45,27 +45,27 @@ jQuery(function($, undefined) {
         } else if (command == commands.install) {
             response = responses.install;
             $( "#l1-s1" ).hide();
-            $( "#l1-s2" ).show();
+            $( "#l1-s2" ).fadeIn();
         } else if (command == commands.dkr_pull) {
             response = responses.dkr_pull;
             $( "#l2-s1" ).hide();
-            $( "#l2-s2" ).show();
+            $( "#l2-s2" ).fadeIn();
             $( "#l2-s3" ).hide();
         } else if (command == commands.dkr_history) {
             response = responses.dkr_history;
             $( "#l2-s1" ).hide();
             $( "#l2-s2" ).hide();
-            $( "#l2-s3" ).show();
+            $( "#l2-s3" ).fadeIn();
         } else if (command == commands.dkr_run1) {
             response = responses.dkr_run1;
             $( "#l3-s1" ).hide();
-            $( "#l3-s2" ).show();
+            $( "#l3-s2" ).fadeIn();
             $( "#l3-s3" ).hide();
         } else if (command == commands.psa) {
             response = responses.psa;
             $( "#l3-s1" ).hide();
             $( "#l3-s2" ).hide();
-            $( "#l3-s3" ).show();
+            $( "#l3-s3" ).fadeIn();
         } else if (command == '') {
             response = '';
         }
@@ -81,5 +81,5 @@ jQuery(function($, undefined) {
         greetings: 'Last login: Mon Mar 30 07:28:52 2015 from 172.16.3.1',
         name: 'docker_demo',
         height: 200,
-        prompt: '$ '});
+        prompt: '# '});
 });
