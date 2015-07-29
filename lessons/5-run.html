@@ -32,57 +32,53 @@
       </ol>
     </div>
   </header>
-  <div class="instruction-div">
-    <div id="l5-s1">
-      <h2><em>5.1</em>It's alive!</h2>
-      <p>Do you remember way back in <a href="/lessons/3-containers.html">Lesson 3</a>, we talked about how containers lived fast and died young? Even though we've built a fancy little image with Apache on it, if we try to run this image in a new container, it will just exit straight away because we haven't told it to *do* anything.</p>
-      <p>Because this is webserver, we can run Apache in "FOREGROUND" mode to keep it alive, and thus, keep our container running. </p>
-      <p>Go ahead and run the command below, and in the next section we'll talk about what this command is actually doing in more detail.</p>
-      <pre><code>docker run -d -p 80:80 -d littleguy /usr/sbin/apache2ctl -D FOREGROUND</code></pre>
-      <!-- <p class="next-lesson"><a href="/lessons/4-dockerfile.html">Skip to Lesson 5 - Container Ports</a></p> -->
-    </div>
-    <div id="l5-s2" style="display: none">
-      <h2><em>5.2</em>Now I have a container. Ho. Ho. Ho. </h2>
-      <p>Docker has started your container and returned your container's unique ID number. That's all it took!</p>
-      <p>Because we used the -d flag, Docker ran this container in "detached mode". Without this flag, Docker would have connected us directly to the container, where we might see any output from the apache2ctl process that is running the web server.</p>
-      <p>With <i>-p 80:80</i> Docker is </p>connecting port 80 on our local machine, to port 80 on the container.</p>
-      <p>Finally, we told Docker the image we wanted to use (<i>littleguy</i>) and the command we wanted to run in that container (<i>apache2ctl</i>).
-      <p>Want to see your baby? Run the following command to see which containers are currently running.</p>
-      <pre><code>docker ps</code></pre>
-
-      <!-- <p class="next-lesson"><a href="/lessons/4-dockerfile.html">Skip to Lesson 5 - Container Ports</a></p> -->
-    </div>
-    <div id="l5-s3" style="display: none">
-      <h2><em>5.3</em>Connecting to our webserver</h2>
-      <p>But why should you take Docker's word for it? </p>
-      <p>Why don't you use wget to connect to the localhost on port 80, and pull down a copy of index.html</p>
-      <pre><code>wget localhost</code></pre>
-      <p class="next-lesson"><a href="/lessons/4-dockerfile.html">Skip to Lesson 5 - Container Ports</a></p>
-    </div>
-    <div id="l5-s4" style="display: none">
-      <h2><em>5.4</em>Little Guy, Big Web Server</h2>
-      <p>Congratulations! You have built a (simulated) web server using Docker. </p>
-      <p>That's all the lessons we've built so far, but Docker is full of awesome tricks and tools and we've barely scratched the surface.</p>
-      <p>Want to learn more about Docker? We recommend you take a look at the following:</p>
-      <p><a href="https://docs.docker.com/articles/basics/" target="_blank">Container Basics</a> will show you a bunch of cool tricks, like committing a container as a new image</p>
-      <p><a href="https://docs.docker.com/userguide/dockerlinks/" target="_blank">Linking containers</a> can show you how to make containers talk seamlessly to one another.</p>
-      <p><a href="https://docs.docker.com/articles/dockerfile_best-practices/" target="_blank">Dockerfile best practices</a> will teach you how to write the most badass dockerfiles.</p>
-      <p><a href="https://github.com/wsargent/docker-cheat-sheet" target="_blank">The Docker Cheat Sheet</a> has a whole bunch of time saving tips for experienced Docker users. </p>
-
-
-
-    </div>
-  </div>
-  <div class="terminal-div">
-    <div class="toolbar">
-      <div class="title">
-        <span class="title-console">root@dockersim: /littleguy (bash)</span>
+  <main>
+    <div class="instruction-wrapper">
+      <div class="instruction-div">
+      <div id="l5-s1">
+        <h2><em>5.1</em>It's alive!</h2>
+        <p>Do you remember way back in <a href="/lessons/3-containers.html">Lesson 3</a>, we talked about how containers lived fast and died young? Even though we've built a fancy little image with Apache on it, if we try to run this image in a new container, it will just exit straight away because we haven't told it to *do* anything.</p>
+        <p>Because this is webserver, we can run Apache in "FOREGROUND" mode to keep it alive, and thus, keep our container running. </p>
+        <p>Go ahead and run the command below, and in the next section we'll talk about what this command is actually doing in more detail.</p>
+        <pre><code>docker run -d -p 80:80 -d littleguy /usr/sbin/apache2ctl -D FOREGROUND</code></pre>
+      </div>
+      <div id="l5-s2" style="display: none">
+        <h2><em>5.2</em>Now I have a container. Ho. Ho. Ho. </h2>
+        <p>Docker has started your container and returned your container's unique ID number. That's all it took!</p>
+        <p>Because we used the -d flag, Docker ran this container in "detached mode". Without this flag, Docker would have connected us directly to the container, where we might see any output from the apache2ctl process that is running the web server.</p>
+        <p>With <i>-p 80:80</i> Docker is </p>connecting port 80 on our local machine, to port 80 on the container.</p>
+        <p>Finally, we told Docker the image we wanted to use (<i>littleguy</i>) and the command we wanted to run in that container (<i>apache2ctl</i>).
+        <p>Want to see your baby? Run the following command to see which containers are currently running.</p>
+        <pre><code>docker ps</code></pre>
+      </div>
+      <div id="l5-s3" style="display: none">
+        <h2><em>5.3</em>Connecting to our webserver</h2>
+        <p>But why should you take Docker's word for it? </p>
+        <p>Why don't you use wget to connect to the localhost on port 80, and pull down a copy of index.html</p>
+        <pre><code>wget localhost</code></pre>
+        <p class="next-lesson"><a href="/lessons/4-dockerfile.html">Skip to Lesson 5 - Container Ports</a></p>
+      </div>
+      <div id="l5-s4" style="display: none">
+        <h2><em>5.4</em>Little Guy, Big Web Server</h2>
+        <p>Congratulations! You have built a (simulated) web server using Docker. </p>
+        <p>That's all the lessons we've built so far, but Docker is full of awesome tricks and tools and we've barely scratched the surface.</p>
+        <p>Want to learn more about Docker? We recommend you take a look at the following:</p>
+        <p><a href="https://docs.docker.com/articles/basics/" target="_blank">Container Basics</a> will show you a bunch of cool tricks, like committing a container as a new image</p>
+        <p><a href="https://docs.docker.com/userguide/dockerlinks/" target="_blank">Linking containers</a> can show you how to make containers talk seamlessly to one another.</p>
+        <p><a href="https://docs.docker.com/articles/dockerfile_best-practices/" target="_blank">Dockerfile best practices</a> will teach you how to write the most badass dockerfiles.</p>
+        <p><a href="https://github.com/wsargent/docker-cheat-sheet" target="_blank">The Docker Cheat Sheet</a> has a whole bunch of time saving tips for experienced Docker users. </p>
       </div>
     </div>
-    <div id="term_demo" class="terminal">
+    <div class="terminal-div">
+      <div class="toolbar">
+        <div class="title">
+          <span class="title-console">root@dockersim: /littleguy (bash)</span>
+        </div>
+      </div>
+      <div id="term_demo" class="terminal">
+      </div>
     </div>
-  </div>
-  </div>
+  </main>
   <footer>
     <div class="footer-wrapper">
       <p class="footer-left"><a href="mailto:dockersim@mikerichardson.com.au">dockersim@mikerichardson.com.au</a></p>
