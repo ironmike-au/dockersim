@@ -17,6 +17,11 @@ header  {
     height: 35px;
 }
 
+.header-wrapper {
+    width: 800px;
+    margin: 0 auto;
+}
+
 .active {
     font-weight: bold;
 }
@@ -24,7 +29,7 @@ header  {
 header ol {
     list-style: none;
     display: inline;
-    float: right;
+    float: left;
     padding: 7px 0 0;
     width: 90%;
 }
@@ -49,9 +54,7 @@ footer  {
     left: 0;
     width: 100%;
     margin: 0 auto;
-    border-top-style: solid;
-    border-top-width: 1px;
-    border-top-color: gray;
+    border-top: 1px solid #D3D3D3;
     background: #EDEDED;
     height: 35px;
     font-size: 0.7em;
