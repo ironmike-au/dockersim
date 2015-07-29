@@ -7,7 +7,8 @@
 </head>
 <body>
   <header>
-    <ol><li>Lessons: </li>
+    <ol><li><a href="/" style="padding-right: 30px">Dockersim.com</a></li>
+        <li>Lessons: </li>
         <li><a href="/lessons/1-install.html">Install</a></li>
         <li>></li>
         <li><a class="active" href="/lessons/2-images.html">Images</a></li>
@@ -27,24 +28,32 @@
         <p>For easy access, Docker runs the <a href="https://hub.docker.com">Docker Hub</a>. A repository of many, many images. You can use Hub to download public images, and you can save your own private images there, too. Heck, you can even run your own repository, but let's worry about that later.</p>
         <p>Pulling an image from a repository is simple. Type the following command into the terminal window above and see what happens.</p>
         <pre><code>docker pull ubuntu:14.04</code></pre>
+        <p class="next-lesson"><a href="/lessons/3-containers.html">Skip to Lesson 3 - Container Yourself</a></p>
       </div>
       <div id="l2-s2" style="display: none">
         <p>Uhmm... what just happened? How many things got downloaded just now? </p>
         <p>Remember that docker images are read-only. Docker images use <i>layers</i> to record changes from one version of the image to the next. With each of these lines, you see a new version of that image being "layered" on top of the earlier versions.</p>
         <p>What you see above are four <i>layers</i> of the Ubuntu 14.04 image. We can see more detail by looking at the image history:</p>
         <pre><code>docker history ubuntu:14.04</code></pre>
+        <p class="next-lesson"><a href="/lessons/3-containers.html">Skip to Lesson 3 - Container Yourself</a></p>
       </div>
       <div id="l2-s3" style="display: none">
         <p>Here you can see the four layers that make up this image. The oldest (first) update is at the bottom.</p>
         <p>Strictly speaking, layers are images on top of each other. That's why each layer has it's own unique image ID, which you can see on the left.</p>
-        <p>Now that we know a little bit about how images work, let's use one to launch our first container, over in <a href="/lessons/3-containers.html">lesson 3</a></p>
+        <p>Now that we know a little bit about how images work, let's use one to launch our first container, over in Lesson 3</p>
+        <p class="next-lesson"><a href="/lessons/3-containers.html">Proceed to Lesson 3 - Container Yourself</a></p>
       </div>
     </div>
   </div>
   <div class="terminal-div">
-    <div id="term_demo" class="terminal">
+      <div class="toolbar">
+        <div class="title">
+        <span class="title-console">root@dockersim: / (bash)</span>
+        </div>
+        </div>
+      <div id="term_demo" class="terminal">
+      </div>
     </div>
-  </div>
   </main>
 
   <script src="/assets/js/jquery-1.7.1.min.js"></script>

@@ -10,8 +10,11 @@ header  {
     padding-top: 0px;
     position: absolute;
     width: 100%;
-    background: #efedee;
+
     z-index: 10;
+    background: #EDEDED;
+    border-bottom: 1px solid #D3D3D3;
+    height: 35px;
 }
 
 .active {
@@ -67,7 +70,7 @@ main {
 }
 
 .instruction-div {
-    padding-top: 60px;
+    padding-top: 50px;
     width: 800px;
     margin: 0 auto;
     /*height: 55%;*/
@@ -86,6 +89,7 @@ main {
     margin-right: 5px;
     padding-right: 15px;
     position: relative;
+    font-style: normal;
 }
 
 .instruction-div h5 {
@@ -104,10 +108,9 @@ main {
     border-top-style: solid;
     border-top-color: gray;
     border-top-width: 1px;
-    background-color: #4183c4;
+    background-color: #22b8eb;
     padding-top: 40px;
     padding-bottom: 40px;
-
     position: fixed;
     bottom: 0;
     left: 0;
@@ -115,9 +118,43 @@ main {
     width: 100%;
 }
 
+.toolbar {
+    background-color: #efedee;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#efedee), to(#c1c1c1));
+    background-image: -webkit-linear-gradient(top, #efedee, #c1c1c1);
+    background-image: -moz-linear-gradient(top, #efedee, #c1c1c1);
+    background-image: -ms-linear-gradient(top, #efedee, #c1c1c1);
+    background-image: -o-linear-gradient(top, #efedee, #c1c1c1);
+    background-image: linear-gradient(top, #efedee, #c1c1c1);
+    border-radius: 3px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border: 1px solid #6287A4;
+    border-bottom: 0;
+    height: 30px;
 
+    position: relative;
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 20px;
+    -webkit-box-shadow: 3px 4px 10px 2px rgba(92,92,92,1);
+    -moz-box-shadow: 3px 4px 10px 2px rgba(92,92,92,1);
+    box-shadow: 3px 4px 10px 2px rgba(92,92,92,1);
+}
 
+.toolbar .controls {
+    left: 9px;
+    position: absolute;
+    top: 9px;
+}
 
+.toolbar .title {
+    color: #000;
+    display: block;
+    font: 0.9em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 #fff;
 
 pre {
     font-size: 0.9em;
