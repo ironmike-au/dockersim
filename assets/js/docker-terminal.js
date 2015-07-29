@@ -7,8 +7,6 @@ var responses = {install: "Reading package lists... Done \n" +
                             "0 upgraded, 1 newly installed, 0 to remove and 399 not upgraded. \n" +
                             "Setting up docker.io (1.0.1~dfsg1-0ubuntu1~ubuntu0.14.04.1) ... \n" +
                             "docker.io start/running, process 22098",
-                 ps:"CONTAINER ID   IMAGE           COMMAND       CREATED         STATUS         PORTS       NAMES \n" +
-                    "220c950d78f7   zem_one:0.0.2   \"/bin/bash\"   2 seconds ago   Up 1 seconds               boring_ritchie",
                  dkr_run:"220c950d78f70959c4a9e28b060c8965166b25204b5bf4c139294d022289de0e",
                  dkr_pull:"Pulling repository ubuntu \n" +
                             "d2a0ecffe6fa: Download complete \n" +
@@ -51,10 +49,22 @@ var responses = {install: "Reading package lists... Done \n" +
                         "d2a0ecffe6fa        2 weeks ago         /bin/sh -c #(nop) CMD [\"/bin/bash\"]             0 B\n" +
                         "29460ac93442        2 weeks ago         /bin/sh -c sed -i 's/^#\\s*\\(deb.*universe\\)$/   1.895 kB\n" +
                         "b670fb0c7ecd        2 weeks ago         /bin/sh -c echo '#!/bin/sh' > /usr/sbin/polic   194.5 kB\n" +
-                        "83e4dde6b9cf        2 weeks ago         /bin/sh -c #(nop) ADD file:c8f078961a543cdefa   188.2 MB"};
+                        "83e4dde6b9cf        2 weeks ago         /bin/sh -c #(nop) ADD file:c8f078961a543cdefa   188.2 MB",
+                dkr_run2: "202d56ea7b51f53bda8b9d8c04880cca3038cb27e26a7b0c351964802afc1cac",
+                ps: "CONTAINER ID  IMAGE             COMMAND      CREATED         STATUS        PORTS        NAMES\n" +
+                    "202d56ea7b51  littleguy:latest  apache2ctl   20 seconds ago  Up 20 seconds  80->80/tcp   angry_sammet",
+                wget: "Resolving localhost (localhost)... 127.0.0.1\n" +
+                        "Connecting to localhost (localhost)|127.0.0.1|:80... connected.\n" +
+                        "HTTP request sent, awaiting response... 200 OK\n" +
+                        "Length: 11510 (11K) [text/html]\n" +
+                        "Saving to: ‘index.html’\n" +
+                        "\n" +
+                        "100%[==========================================================>] 11,510      --.-K/s   in 0s\n" +
+                        "\n" +
+                        "2015-07-29 11:23:44 (276 MB/s) - ‘index.html’ saved [11510/11510]"
+            };
 
 var commands = {install: "apt-get install docker.io",
-                ps: "docker ps",
                 dkr_run: "docker run -d -v /mnt/hgfs/django-initial-development:/www -i -t -p 8000:8000 zem_one:0.0.2 /bin/bash",
                 dkr_pull: "docker pull ubuntu:14.04",
                 dkr_history: "docker history ubuntu:14.04",
@@ -62,7 +72,11 @@ var commands = {install: "apt-get install docker.io",
                 psa: "docker ps -a",
                 cat_df: "cat Dockerfile",
                 build: "docker build -t littleguy /littleguy",
-                history: "docker history littleguy"}
+                history: "docker history littleguy",
+                dkr_run2: "docker run -d -p 80:80 -d littleguy /usr/sbin/apache2ctl -D FOREGROUND",
+                ps: "docker ps",
+                wget: "wget localhost"
+                }
 
 // -----------------------------------------------------------------------
 // :: Set up and respond to docker console commands using pre-defined responses
@@ -70,11 +84,7 @@ var commands = {install: "apt-get install docker.io",
 jQuery(function($, undefined) {
     $('#term_demo').terminal(function(command, term) {
         var response = null;
-        if (command == commands.ps) {
-            response = responses.ps;
-        } else if (command == commands.dkr_run) {
-            response = responses.dkr_run;
-        } else if (command == commands.install) {
+        if (command == commands.install) {
             response = responses.install;
             $( "#l1-s1" ).hide();
             $( "#l1-s2" ).fadeIn();
@@ -116,6 +126,24 @@ jQuery(function($, undefined) {
             $( "#l4-s2" ).hide();
             $( "#l4-s3" ).hide();
             $( "#l4-s4" ).fadeIn();
+        } else if (command == commands.dkr_run2) {
+            response = responses.dkr_run2;
+            $( "#l5-s1" ).hide();
+            $( "#l5-s2" ).fadeIn();
+            $( "#l5-s3" ).hide();
+            $( "#l5-s4" ).hide();
+        } else if (command == commands.ps) {
+            response = responses.ps;
+            $( "#l5-s1" ).hide();
+            $( "#l5-s2" ).hide();
+            $( "#l5-s3" ).fadeIn();
+            $( "#l5-s4" ).hide();
+        } else if (command == commands.wget) {
+            response = responses.wget;
+            $( "#l5-s1" ).hide();
+            $( "#l5-s2" ).hide();
+            $( "#l5-s3" ).hide();
+            $( "#l5-s4" ).fadeIn();
         } else if (command == '') {
             response = '';
         }
