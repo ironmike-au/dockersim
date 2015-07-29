@@ -17,7 +17,7 @@
         <li>></li>
         <li><a class="active" href="/lessons/4-dockerfiles.html">Dockerfiles</a>
         <li>></li>
-        <li><a href="/lessons/5-run.html">Run it!</a>
+        <li><a href="/lessons/5-run.html">Run container run!</a>
     </ol>
   </header>
   <div class="instruction-div">
@@ -28,7 +28,7 @@
       <p>By creating a dockerfile, you only have to explain how docker should build your image once. It will save you heaps of time, and it'll ensure a consistent build time and time again.</p>
       <p>We took the liberty of making a simple Dockerfile for you. Why don't you take a look at it? </p>
       <pre><code>cat Dockerfile</code></pre>
-      <p class="next-lesson"><a href="/lessons/4-dockerfile.html">Skip to Lesson 5 - Container Ports</a></p>
+      <p class="next-lesson"><a href="/lessons/5-run.html">Skip to Lesson 5 - Run Container Run!</a></p>
     </div>
     <div id="l4-s2" style="display: none">
       <h2><em>4.2</em>Understanding the Dockerfile</h2>
@@ -37,7 +37,7 @@
       <p>So let's build it! Docker build looks foor a Dockerfile in the path you specify, in our case, it's in /littleguy.</p>
       <pre><code>docker build -t littleguy /littleguy</code></pre>
       <p>The -t flag tags our image for friendly human reference. </p>
-      <p class="next-lesson"><a href="/lessons/4-dockerfile.html">Skip to Lesson 5 - Container Ports</a></p>
+      <p class="next-lesson"><a href="/lessons/5-run.html">Skip to Lesson 5 - Run Container Run!</a></p>
     </div>
     <div id="l4-s3" style="display: none">
       <h2><em>4.3</em>Layers upon layers</h2>
@@ -45,14 +45,14 @@
       <p>You might have noticed that with each Step, docker used a new image ID. As we mentioned in <a href="/lessons/2-images.html">Lesson 2</a>, images are read-only, so each change to an image is layered on top of the earlier images.</p>
       <p>Let's take a look at the layers in our new image. </p>
       <pre><code>docker history littleguy</code></pre>
-      <p class="next-lesson"><a href="/lessons/4-dockerfile.html">Skip to Lesson 5 - Container Ports</a></p>
+      <p class="next-lesson"><a href="/lessons/5-run.html">Skip to Lesson 5 - Run Container Run!</a></p>
     </div>
     <div id="l4-s4" style="display: none">
       <h2><em>4.4</em>Little Guy: A History</h2>
       <p>As you can see, this image includes each step in our Docker file, as well as the earlier steps from the Ubuntu 14.04 image, too.</p>
       <p>Image layers help you to see roll-back changes to an image that break your app, and, they let you see a history of changes to the image. </p>
       <p>Now that we have an image with Apache2 on it, let's take a look and see how we can bring it to life in a new container. </p>
-      <p class="next-lesson"><a href="/lessons/4-dockerfile.html">Proceed to Lesson 5 - Container Ports</a></p>
+      <p class="next-lesson"><a href="/lessons/5-run.html">Proceed to Lesson 5 - Run Container Run!</a></p>
     </div>
   </div>
   <div class="terminal-div">
@@ -65,6 +65,12 @@
     </div>
   </div>
   </div>
+  <footer>
+    <div class="footer-wrapper">
+      <p class="footer-left"><a href="mailto:dockersim@mikerichardson.com.au">dockersim@mikerichardson.com.au</a></p>
+      <p class="footer-right"><a href="http://github.com/otakumike/">GitHub</a></p>
+    </div>
+  </footer>
   <script src="/assets/js/jquery-1.7.1.min.js"></script>
   <script src="/assets/js/bootstrap.min.js"></script>
   <script src="/assets/js/jquery.terminal-0.8.8.js"></script>

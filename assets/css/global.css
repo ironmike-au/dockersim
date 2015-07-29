@@ -40,6 +40,52 @@ main {
     overflow: auto;
 }
 
+footer  {
+    height: 30px;
+    margin-top: 0px;
+    padding-top: 0px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 auto;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: gray;
+    background: #EDEDED;
+    height: 35px;
+    font-size: 0.7em;
+    font-weight: 200;
+}
+
+.footer-wrapper {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.footer-wrapper a {
+    color: black;
+    text-decoration: underline;
+}
+
+.footer-wrapper a:hover,
+.footer-wrapper a:active,
+.footer-wrapper a:visited {
+    text-decoration: none;
+}
+
+.footer-left {
+    padding: 7px 0 0;
+    display: inline;
+    float: left;
+}
+
+.footer-right {
+    padding: 7px 0 0;
+    display: inline;
+    float: right;
+}
+
 .home-wrapper {
     padding-top: 80px;
     width: 800px;
