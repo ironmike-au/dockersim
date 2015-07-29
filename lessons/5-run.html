@@ -40,7 +40,7 @@
         <p>Do you remember way back in <a href="/lessons/3-containers.html">Lesson 3</a>, we talked about how containers lived fast and died young? Even though we've built a fancy little image with Apache on it, if we try to run this image in a new container, it will just exit straight away because we haven't told it to *do* anything.</p>
         <p>Because this is webserver, we can run Apache in "FOREGROUND" mode to keep it alive, and thus, keep our container running. </p>
         <p>Go ahead and run the command below, and in the next section we'll talk about what this command is actually doing in more detail.</p>
-        <pre><code>docker run -d -p 80:80 -d littleguy /usr/sbin/apache2ctl -D FOREGROUND</code></pre>
+        <pre><code>docker run -d -p 80:80 littleguy /usr/sbin/apache2ctl -D FOREGROUND</code></pre>
       </div>
       <div id="l5-s2" style="display: none">
         <h2><em>5.2</em>Now I have a container. Ho. Ho. Ho. </h2>

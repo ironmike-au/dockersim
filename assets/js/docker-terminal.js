@@ -73,7 +73,7 @@ var commands = {install: "apt-get install docker.io",
                 cat_df: "cat Dockerfile",
                 build: "docker build -t littleguy /littleguy",
                 history: "docker history littleguy",
-                dkr_run2: "docker run -d -p 80:80 -d littleguy /usr/sbin/apache2ctl -D FOREGROUND",
+                dkr_run2: "docker run -d -p 80:80 littleguy /usr/sbin/apache2ctl -D FOREGROUND",
                 ps: "docker ps",
                 wget: "wget localhost"
                 }
